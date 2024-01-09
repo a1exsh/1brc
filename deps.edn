@@ -1,2 +1,8 @@
 {:deps {org.clojure/clojure    {:mvn/version "1.11.1"}
-        org.clojure/core.async {:mvn/version "1.6.673"}}}
+        org.clojure/core.async {:mvn/version "1.6.673"}
+        com.clojure-goes-fast/clj-async-profiler {:mvn/version "1.1.1"}}
+
+ :aliases {:big-heap {:jvm-opts ["-Xms1G" "-Xmx8G"]}
+           :prof     {:jvm-opts ["-Djdk.attach.allowAttachSelf"
+                                 "-XX:+UnlockDiagnosticVMOptions"
+                                 "-XX:+DebugNonSafepoints"]}}}
